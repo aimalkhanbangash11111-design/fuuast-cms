@@ -56,4 +56,9 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/complaints', [App\Http\Controllers\ComplaintController::class, 'store'])->name('complaints.store');
     Route::get('/my-complaints', [App\Http\Controllers\ComplaintController::class, 'myComplaints'])->name('complaints.my');
     Route::get('/complaints/search', [App\Http\Controllers\ComplaintController::class, 'search'])->name('complaints.search');
+    // ADMIN PANEL - Week 7
+Route::prefix('admin')->name('admin.')->group(function(){
+    Route::get('/complaints', [App\Http\Controllers\Admin\ComplaintController::class, 'index'])->name('complaints.index');
+    Route::post('/complaints/{complaint}/status', [App\Http\Controllers\Admin\ComplaintController::class, 'updateStatus'])->name('complaints.status');
+});
 });
