@@ -54,3 +54,4 @@ https://github.com/aimalkhanbangash11111-design/fuuast-cms
 
 
 ![FUUAST CMS ERD](public/ERD.png)
+
